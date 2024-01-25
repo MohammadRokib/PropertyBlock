@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: rgb(97, 89, 102);
+            font-family: 'cursive-font', cursive;
+        }
+
+        .base {
+            width: 1120px;
+            height: 788px;
+            background-color: rgb(248, 223, 178);
+        }
+
+        .outerBorder {
+            box-sizing: border-box;
+            border: 2px solid white;
+            margin: 2px;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+        }
+
+        .innerBorder {
+            box-sizing: border-box;
+            border: 2px solid white;
+            margin: 25px;
+            width: calc(100% - 50px);
+            height: calc(100% - 50px);
+        }
+
+        .certificateBody {
+            box-sizing: border-box;
+            margin: 2px;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            background-color: white;
+        }
+
+        .headerBody {
+            border: 1px solid white;
+            text-align: center;
+            height: 15%;
+            margin: 1px;
+        }
+
+        .cbody {
+            border: 1px solid white;
+            height: 70%;
+            margin: 1px;
+        }
+
+        .mainBody {
+            padding: 0px 70px;
+        }
+
+        .declaration {
+            margin: 0px 0px 0px 0px;
+        }
+
+        .landInfo {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        .infoBody {
+            display: flex;
+            margin-right: 80px;
+        }
+
+        .infoCard {
+            margin-right: 40px;
+        }
+
+        .info {
+            margin-top: 15px;
+        }
+
+        .footer {
+            height: 15%;
+            text-align: center;
+            margin: 1px;
+            padding: 0px 70px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footerbox {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .footertext {
+            font-size: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .headerTitle {
+            margin: 23px;
+            font-size: 40px;
+        }
+
+        .cID {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 60px;
+        }
+
+        .certificateTitle {
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 40px;
+            display: block;
+            margin-bottom: 3px;
+            text-align: center;
+        }
+
+        .ownerInfo {
+            font-size: 23px;
+            font-weight: bold;
+            line-height: 40px;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .title {
+            font-size: 25px;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .text {
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="base">
+        <div class="outerBorder">
+            <div class="innerBorder">
+                <div class="certificateBody">
+                    <div class="headerBody">
+                        <h1 class="headerTitle">Land Revenue Office Bangladesh</h1>
+                    </div>
+
+                    <div class="cbody">
+
+                        <div class="mainBody">
+                            <div class="declaration">
+                                    <span class="certificateTitle"><u>This is to certify that the rightful owner of the land is</u></span>
+                                <span class="ownerInfo">ID: {{AssetID}}</span>
+                                <span class="ownerInfo">Name: {{OwnerName}}</span>
+                                <span class="ownerInfo">NID: {{OwnerNID}}</span>
+                            </div>
+
+                            <span class="cID"><u>Land Information</u></span>
+                            <!-- <hr class="line"> -->
+                            <div class="landInfo">
+                                <div class="infoBody">
+                                    <div class="infoCard">
+                                        <div class="info">
+                                            <span class="text">Division </span>
+                                        </div>
+                                        <div class="info">
+                                            <span class="text">District </span>
+                                        </div>
+                                        <div class="info">
+                                            <span class="text">Upazila </span>
+                                        </div>
+                                    </div>
+                                    <div class="infoCard">
+                                        <div class="info">
+                                            <span class="text">: {{Division}}</span>
+                                        </div>
+                                        <div class="info">
+                                            <span class="text">: {{District}}</span>
+                                        </div>
+                                        <div class="info">
+                                            <span class="text">: {{Upazila}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="infoBody">
+                                    <div class="infoCard">
+                                        <div class="info">
+                                            <span class="text">Dag/Plot Number</span>
+                                        </div>
+                                        <div class="info">
+                                            <span class="text">Mouza</span>
+                                        </div>
+                                        <div class="info">
+                                            <span class="text">Khatian Number</span>
+                                        </div>
+                                    </div>
+                                    <div class="infoCard">
+                                        <div class="info">
+                                            <span class="text">: {{DagNo}}</span>
+                                        </div>
+                                        <div class="info">
+                                            <span class="text">: {{Mouza}}</span>
+                                        </div>
+                                        <div class="info">
+                                            <span class="text">: {{KhatianNo}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span class="cID"><u>Land Deed</u></span>
+                            <div class="landInfo">
+                                <div class="infoBody">
+                                    <div class="infoCard">
+                                        <div class="info">
+                                            <span class="text">Deed ID</span>
+                                        </div>
+                                    </div>
+                                    <div class="infoCard">
+                                        <div class="info">
+                                            <span class="text">: {{DeedID}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div class="footerbox">
+                            <div>
+                                <span>{{AUTHENTICATOR_1}}</span>
+                                <hr style="margin: 0;">
+                                <span>Ministry of Land</span>
+                            </div>
+                            <div>
+                                <span>{{AUTHENTICATOR_2}}</span>
+                                <hr style="margin: 0;">
+                                <span>Land Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

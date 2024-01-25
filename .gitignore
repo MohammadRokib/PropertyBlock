@@ -1,0 +1,21 @@
+########### API folder ###########
+
+## Folders
+chaincode-api/api/node_modules/
+chaincode-api/api/uploads/
+
+## Public & Private Key
+chaincode-api/api/id_rsa_priv.pem
+chaincode-api/api/id_rsa_pub.pem
+
+## .env
+chaincode-api/api/.env
+
+
+######## Chaincode Folder ########
+
+## Folders
+chaincode-api/chaincode/vendor/
+
+## go.sum
+chaincode-api/chaincode/go.sum
